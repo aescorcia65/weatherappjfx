@@ -14,7 +14,7 @@ import javafx.stage.Window;
 /**
  * Controller for the file upload scene.
  */
-public class HelloController {
+public class FileUpload {
 
     @FXML
     private Label filePathLabel;
