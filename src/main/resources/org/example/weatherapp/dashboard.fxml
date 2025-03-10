@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<?import java.lang.String?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.weatherapp.Dashboard"
+      alignment="CENTER"
+      spacing="20"
+      stylesheets="@dashboard.css">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Drop-down for month selection -->
+    <ComboBox fx:id="monthComboBox" prefWidth="200">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="January"/>
+                <String fx:value="February"/>
+                <String fx:value="March"/>
+                <String fx:value="April"/>
+                <String fx:value="May"/>
+                <String fx:value="June"/>
+                <String fx:value="July"/>
+                <String fx:value="August"/>
+                <String fx:value="September"/>
+                <String fx:value="October"/>
+                <String fx:value="November"/>
+                <String fx:value="December"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <!-- Button to calculate average temperature -->
+    <Button text="Calculate Average Temperature" onAction="#onCalculateAverageTemp"/>
+
+    <!-- Label to display the calculated average temperature -->
+    <Label fx:id="resultLabel" text="Average temperature will be displayed here."/>
+
+    <!-- TextField for entering a temperature threshold -->
+    <TextField fx:id="thresholdTextField" promptText="Enter temperature threshold"/>
+
+    <!-- Button to find days with temperature above the threshold -->
+    <Button text="Find Days Above Threshold" onAction="#onFindDaysAboveThreshold"/>
+
+    <!-- TableView to display days with temperature above the specified threshold -->
+    <TableView fx:id="thresholdTableView" prefHeight="200" prefWidth="400">
+        <columns>
+            <TableColumn fx:id="dateColumn" text="Date" prefWidth="100"/>
+            <TableColumn fx:id="tempColumn" text="Temperature (°C)" prefWidth="100"/>
+            <TableColumn fx:id="humidityColumn" text="Humidity (%)" prefWidth="100"/>
+            <TableColumn fx:id="precipColumn" text="Precipitation" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <!-- Label to display the number of rainy days -->
+    <Label fx:id="rainyDaysLabel" text=""/>
+</VBox>

@@ -1,0 +1,50 @@
+
+.root {
+    -fx-background-color: linear-gradient(to bottom, #f0f8ff, #87cefa);
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-padding: 20;
+}
+
+/* Style ComboBox and TextField */
+.combo-box, .text-field {
+    -fx-font-size: 14px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #b0c4de;
+    -fx-border-radius: 4;
+    -fx-padding: 4;
+}
+
+/* Style buttons */
+.button {
+    -fx-background-color: #4682b4;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 4;
+    -fx-padding: 8 15;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #5a9bd5;
+}
+
+/* Style TableView */
+.table-view {
+    -fx-border-color: #b0c4de;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-color: #ffffff;
+}
+
+/* Style table column headers */
+.table-column-header {
+    -fx-background-color: #87cefa;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+/* Style labels */
+.label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+}
